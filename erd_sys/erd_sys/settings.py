@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'Music_Instrument',
     
     'rest_framework',
+
+    'Warehouse'
     
 ]
 
