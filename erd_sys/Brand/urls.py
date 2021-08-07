@@ -10,12 +10,12 @@ from .views import *
 router = routers.DefaultRouter()
 router.register(r'brand', Brandviewset)
 
-urlpatterns = [
-    path('',include(router.urls)),
+# urlpatterns = [
+#     path('',include(router.urls)),
 
-    
-    # path('api-auth/', include('rest_framework.urls')),
-]
+
+#     # path('api-auth/', include('rest_framework.urls')),
+# ]
 
 # urlpatterns = [
 #     path('brand/', views.Brand_list ),

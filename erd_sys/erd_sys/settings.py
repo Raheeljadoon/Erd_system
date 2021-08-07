@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'erd_sys.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Brand_1', 
+        'NAME': 'Erd_system', 
         'USER': 'raheel', 
         'PASSWORD': 'raheel',
         'HOST': '127.0.0.1', 

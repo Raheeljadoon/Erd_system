@@ -1,5 +1,6 @@
 
 
+
 from django import urls
 from django.contrib import admin
 from django.urls import path , include
@@ -10,6 +11,8 @@ from Brand.urls import router as Brand_router
 from Music_Instrument.urls import router as Instrument_router
 from Music_Instrument.urls import router1 as InstrumentType_router
 from Warehouse.urls import router as Warehouse_router
+# from Warehouse.urls import router1 as Warehouse_instrument_router
+from Warehouse.urls import router2 as Warehouse_media_router
 
 
 router = routers.DefaultRouter()
@@ -17,6 +20,9 @@ router.registry.extend(Brand_router.registry)
 router.registry.extend(Instrument_router.registry)
 router.registry.extend(InstrumentType_router.registry)
 router.registry.extend(Warehouse_router.registry)
+# router.registry.extend(Warehouse_instrument_router.registry)
+router.registry.extend(Warehouse_media_router.registry)
+
 
 
 urlpatterns = [

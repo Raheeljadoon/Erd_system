@@ -12,4 +12,9 @@ router1.register(r'warehouseinstrument',Warehouse_instrument_views)
 
 
 
+router2 = routers.DefaultRouter()
+router.register (r'warehousemedia', Warehouse_media_views)
+
+
+
 
