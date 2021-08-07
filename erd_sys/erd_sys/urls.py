@@ -14,6 +14,7 @@ from Warehouse.urls import router as Warehouse_router
 from Warehouse.urls import router1 as Warehouse_instrument_router
 from Warehouse.urls import router2 as Warehouse_media_router
 from Media.urls import router as Media_router
+from Media.urls import router1 as media_type_router
 
 
 router = routers.DefaultRouter()
@@ -24,6 +25,7 @@ router.registry.extend(Warehouse_router.registry)
 router.registry.extend(Warehouse_instrument_router.registry)
 router.registry.extend(Warehouse_media_router.registry)
 router.registry.extend(Media_router.registry)
+router.registry.extend(media_type_router.registry)
 
 
 urlpatterns = [
