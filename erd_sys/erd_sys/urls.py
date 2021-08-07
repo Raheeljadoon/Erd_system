@@ -15,17 +15,36 @@ from Warehouse.urls import router1 as Warehouse_instrument_router
 from Warehouse.urls import router2 as Warehouse_media_router
 from Media.urls import router as Media_router
 from Media.urls import router1 as media_type_router
+from Store.urls import router as store_router
+from Store.urls import router1 as storemusicinst_router
+from Store.urls import router2 as store_media_router
+
+
+
+
+
+
+
 
 
 router = routers.DefaultRouter()
 router.registry.extend(Brand_router.registry)
+
 router.registry.extend(Instrument_router.registry)
 router.registry.extend(InstrumentType_router.registry)
+
 router.registry.extend(Warehouse_router.registry)
 router.registry.extend(Warehouse_instrument_router.registry)
 router.registry.extend(Warehouse_media_router.registry)
+
 router.registry.extend(Media_router.registry)
 router.registry.extend(media_type_router.registry)
+
+router.registry.extend(store_router.registry)
+router.registry.extend(storemusicinst_router.registry)
+router.registry.extend(store_media_router.registry)
+
+
 
 
 urlpatterns = [

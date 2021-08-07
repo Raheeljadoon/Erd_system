@@ -43,7 +43,10 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'Warehouse',
+
     'Media',
+    
+    'Store',
     
 ]
 
