@@ -18,7 +18,10 @@ from Media.urls import router1 as media_type_router
 from Store.urls import router as store_router
 from Store.urls import router1 as storemusicinst_router
 from Store.urls import router2 as store_media_router
-
+from Customer.urls import router as customer_router
+from Customer.urls import router1 as customer_instin_router
+from Customer.urls import router2 as customer_media_invoice_router
+from Customer.urls import router3 as bank_router
 
 
 
@@ -43,6 +46,12 @@ router.registry.extend(media_type_router.registry)
 router.registry.extend(store_router.registry)
 router.registry.extend(storemusicinst_router.registry)
 router.registry.extend(store_media_router.registry)
+
+
+router.registry.extend(customer_router.registry)
+router.registry.extend(customer_instin_router.registry)
+router.registry.extend(customer_media_invoice_router.registry)
+router.registry.extend(bank_router.registry)
 
 
 
