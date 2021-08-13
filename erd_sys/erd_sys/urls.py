@@ -22,6 +22,9 @@ from Customer.urls import router as customer_router
 from Customer.urls import router1 as customer_instin_router
 from Customer.urls import router2 as customer_media_invoice_router
 from Customer.urls import router3 as bank_router
+from user.urls import router as user_router
+from user.urls import router1 as login_router
+
 
 
 
@@ -52,6 +55,9 @@ router.registry.extend(customer_router.registry)
 router.registry.extend(customer_instin_router.registry)
 router.registry.extend(customer_media_invoice_router.registry)
 router.registry.extend(bank_router.registry)
+
+router.registry.extend(user_router.registry)
+router.registry.extend(login_router.registry)
 
 
 

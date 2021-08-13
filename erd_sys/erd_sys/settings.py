@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'Store',
 
     'Customer',
+
+    'user',
     
 ]
 
@@ -95,7 +97,7 @@ WSGI_APPLICATION = 'erd_sys.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Erd_system', 
+        'NAME': 'Erd_system1', 
         'USER': 'raheel', 
         'PASSWORD': 'raheel',
         'HOST': '127.0.0.1', 
@@ -145,3 +147,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'user.User_signup'
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'

@@ -1,16 +1,24 @@
 from django.db import models
 from django.db.models.deletion import CASCADE
+from django.db.models.fields.related import ForeignKey
 from Store.models import Store_musical_instrument , Store_model
 from Media.models import Media_model
 
 
 
 class Customer_model(models.Model):
+    # id = models.IntegerField(ForeignKey)
     Name = models.CharField(max_length=255 )
     Address = models.CharField(max_length=255)
     TelephoneNO = models.CharField(max_length=255)
     DateOfBirth = models.DateField()
 
+    def __str__(self) -> str:
+        return "id "+ str(self.id ) +  self.Name 
+
+
+    # def __init__(self) :
+    #     return id
 
 
 
@@ -22,6 +30,7 @@ class Customer_Instrument_invoice(models.Model):
     date = models.DateTimeField()
     storeId = models.ForeignKey(Store_model,on_delete=CASCADE)
 
+    
 
 
 
